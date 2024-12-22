@@ -10,7 +10,7 @@ public class GetAllUsers : IGetAllUsers
     {
         _context = context;
     }
-    public List<ResultOfGetAllUsersDto> Execute()
+    public List<ResultOfGetAllUsersDto> Execute(String seachKey, int page = 1)
     {
         var user = _context.Users.AsQueryable();
         var result = user.Select(p => new ResultOfGetAllUsersDto

@@ -9,4 +9,9 @@ public class UserController : Controller
     {
         return View();
     }
+
+    public IActionResult GetAllUsers()
+    {
+        return View();
+    }
 }
